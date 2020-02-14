@@ -317,8 +317,9 @@ a {
 }
 
 .service-layout {
-  background-position: 0 0;
   padding-left: 80px;
+
+  background-position: 1px 4px;
   background-image: url("assets/img/icon-mobile.svg");
 }
 
