@@ -166,8 +166,7 @@ a {
 
 .gorizontal-mockup {
   left: 507px;
-  right: 218px;
-
+  top: 52px;
   transform: rotate(90deg);
 }
 
@@ -286,7 +285,6 @@ a {
 .service-item-description {
   margin: 0;
   padding-left: 1px;
-
   font-size: 12px;
   line-height: 21px;
   color: #767e9e;
