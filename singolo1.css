@@ -265,10 +265,9 @@ a {
   width: 300px;
   padding-left: 79px;
   margin-bottom: 30px;
-
   background-image: url("assets/img/icon-pen.svg");
   background-repeat: no-repeat;
-  background-position: 0px 4px;
+  background-position: -2px 2px;
 }
 
 .service-item-title {
@@ -300,12 +299,12 @@ a {
 
 .service-design {
   padding-left: 80px;
-
-  background-position: 1px 4px;
+  background-position: -2px 2px;
 }
 
 .service-ideas {
   background-image: url("assets/img/icon-idea.svg");
+  background-position: -3px 2px;
 }
 
 .service-love {
@@ -316,8 +315,7 @@ a {
 
 .service-layout {
   padding-left: 80px;
-
-  background-position: 1px 4px;
+  background-position: -1px 2px;
   background-image: url("assets/img/icon-mobile.svg");
 }
 
