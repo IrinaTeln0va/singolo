@@ -24,6 +24,16 @@ a {
   cursor: pointer;
 }
 
+.hide-text {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 10px;
