@@ -257,7 +257,7 @@ a {
 }
 
 .low-spacing {
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 .services-list {
@@ -298,13 +298,14 @@ a {
   line-height: 21px;
   color: #767e9e;
   text-align: justify;
-  word-spacing: 0px;
-  letter-spacing: 0px;
+  word-spacing: 0;
+  letter-spacing: 0;
 }
 
 .item-description-love,
 .item-description-star {
-  padding-left: 0;margin-left:  -1px;
+  padding-left: 0;
+  margin-left: -1px;
 }
 
 .service-design {
