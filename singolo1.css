@@ -275,6 +275,7 @@ a {
   width: 300px;
   padding-left: 79px;
   margin-bottom: 30px;
+
   background-image: url("assets/img/icon-pen.svg");
   background-repeat: no-repeat;
   background-position: -2px 2px;
@@ -287,13 +288,17 @@ a {
   font-weight: 900;
   font-size: 18px;
   color: #666d89;
+  white-space: nowrap;
   text-transform: capitalize;
   letter-spacing: -0.1px;
+  text-overflow: clip;
+  overflow: hidden;
 }
 
 .service-item-description {
   margin: 0;
   padding-left: 1px;
+
   font-size: 12px;
   line-height: 21px;
   color: #767e9e;
@@ -310,6 +315,7 @@ a {
 
 .service-design {
   padding-left: 80px;
+
   background-position: -2px 2px;
 }
 
@@ -327,6 +333,7 @@ a {
 .service-layout {
   padding-left: 80px;
   background-position: -1px 2px;
+
   background-image: url("assets/img/icon-mobile.svg");
 }
 
