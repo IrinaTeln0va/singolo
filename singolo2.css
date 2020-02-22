@@ -252,6 +252,10 @@ a {
   border-radius: 50%;
 }
 
+.social-link:hover {
+  border: 2px solid rgba(51, 66, 120, 0.4);
+}
+
 .social-google {
   background-image: url("assets/img/icon-google.png");
 }
