@@ -1,0 +1,215 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 1020px;
+  font-size: 18px;
+  font-family: "Lato", "Arial", sans-serif;
+  color: #767e9e;
+  background-color: #f2f2f2;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  font: inherit;
+  color: inherit;
+
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hide-text {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 960px;
+  box-sizing: border-box;
+}
+
+.portfolio {
+  background-color: #2c3942;
+  border-bottom: 6px solid #323746;
+}
+
+.portfolio-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.portfolio-title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-weight: 900;
+  font-size: 30px;
+  color: #666d89;
+}
+
+.portfolio-intro {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #767e9e;
+}
+
+.filters-wrapper {
+  margin-bottom: 30px;
+
+  font-size: 0;
+}
+
+.filter-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 3px 6px;
+  text-align: center;
+  vertical-align: middle;
+
+  font-size: 12px;
+  color: #767e9e;
+  text-transform: capitalize;
+
+  background-color: transparent;
+  border: 1px solid #666d89;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.filter-btn + .filter-btn {
+  margin-left: 10px;
+}
+
+.filter-btn:hover {
+  color: #dedede;
+
+  border-color: #c5c5c5;
+}
+
+.portfolio-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  max-height: 625px;
+
+  list-style: none;
+  overflow: hidden; 
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.about-us {
+  padding: 30px 0;
+
+  border-bottom: 6px solid #ffffff;
+}
+
+.about-us-title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: 900;
+  font-size: 30px;
+  color: #666d89;
+  text-transform: capitalize;
+}
+
+.about-us-intro {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #767e9e;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member-card {
+  max-width: 300px;
+}
+
+.team-member-name {
+  margin: 10px 0;
+
+  font-weight: 900;
+  font-size: 18px;
+  color: #666d89;
+
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.team-member-desc {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 12px;
+  color: #767e9e;
+}
+
+.team-member-contacts {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-link {
+  display: block;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+
+  background-image: url("assets/img/icon-fb.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 1px solid #666d89;
+  border-radius: 50%;
+}
+
+.social-google {
+  background-image: url("assets/img/icon-google.png");
+}
+
+.social-tw {
+  background-image: url("assets/img/icon-tw.png");
+}
+
+.social-linkedin {
+  background-image: url("assets/img/icon-in.png");
+}
+
+.team-member-contacts li + li {
+  margin-left: 8px;
+}
