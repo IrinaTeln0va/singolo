@@ -654,6 +654,14 @@ a {
   color: #f48c8f;
 }
 
+.request-form input::-webkit-input-placeholder {
+  color: #f48c8f;
+}
+
+.request-form textarea::-webkit-input-placeholder {
+  color: #f48c8f;
+}
+
 .request-form .name-input {
   padding-top: 9px;
   padding-bottom: 9px;
