@@ -4,11 +4,75 @@
   <meta charset="UTF-8">
   <title>Singolo</title>
   <link rel="stylesheet" href="fonts.css">
-  <link rel="stylesheet" href="singolo2.css">
+  <link rel="stylesheet" href="singolo3.css">
 </head>
 <body>
   <main>
-    
+    <section class="request">
+      <div class="container">
+        <h2 class="request-title">
+          Get a Quote
+        </h2>
+        <p class="request-intro">
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+        </p>
+        <div class="request-content-wrap">
+          <form class="request-form" action="handler.php" method="post">
+            <input class="name-input" type="text" name="name" placeholder="Name (Required)" min-length="3" required>
+            <input class="mail-input" type="email" name="mail" placeholder="Email (Required)" min-length="5" required>
+            <input class="subject-input" type="text" name="subject" placeholder="Subject">
+            <textarea class="desc-input" name="description" rows="4" placeholder="Describe your project in detail..."></textarea>
+            <button class="submit-btn" type="submit">Submit</button>
+          </form>
+          <div class="contacts">
+            <h3 class="contacts-title">
+              Contact Information
+            </h3>
+            <p class="contacts-explanation">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+            </p>
+            <ul class="contacts-list">
+              <li class="contacts-item">
+                <a href="#" class="contacts-link">
+                  Elm St. 14/05 Lost City
+                </a>
+              </li>
+              <li class="contacts-item">
+                <a href="tel:035283318635" class="contacts-link contacts-link-phone">
+                  03528 331 86 35
+                </a>
+              </li>
+              <li class="contacts-item">
+                <a href="mailto:info@singolo.com" class="contacts-link contacts-link-mail">
+                  info@singolo.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="container footer-container">
+        <span class="footer-copyright">
+          © Copiright 2013
+        </span>
+        <ul class="footer-contacts">
+          <li>
+            <a href="#" class="social-link social-fb"><span class="hide-text">facebook</span></a>
+          </li>
+          <li>
+            <a href="#" class="social-link social-google"><span class="hide-text">google</span></a>
+          </li>
+          <li>
+            <a href="#" class="social-link social-tw"><span class="hide-text">twitter</span></a>
+          </li>
+          <li>
+            <a href="#" class="social-link social-linkedin"><span class="hide-text">linkedin</span></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </main>
 </body>
 </html>
