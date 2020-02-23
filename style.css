@@ -769,7 +769,7 @@ a {
 }
 
 .main-footer {
-  padding-top: 23px;
+  padding-top: 22px;
   padding-bottom: 20px;
 
   background-color: #2d303a;
@@ -782,14 +782,14 @@ a {
 
 .footer-copyright {
   display: block;
-  width: 110px;
+  width: 210px;
   padding-left: 2px;
 
   font-weight: 300;
   font-size: 12px;
   color: #666d89;
-  letter-spacing: 0.1px;
-  word-spacing: 0.4px;
+  letter-spacing: 0.3px;
+  word-spacing: -1.3px;
 }
 
 .footer-contacts {
