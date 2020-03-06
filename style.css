@@ -302,6 +302,8 @@ a {
 .service-item-description {
   margin: 0;
   padding-left: 1px;
+  max-height: 63px;
+  overflow: hidden;
 
   font-size: 12px;
   line-height: 21px;
@@ -358,7 +360,7 @@ a {
 
 .portfolio-container {
   padding-top: 60px;
-  padding-bottom: 47px;
+  padding-bottom: 48px;
 }
 
 .portfolio-title {
@@ -440,7 +442,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-height: 625px;
+  max-height: 620px;
   margin: 0;
   padding: 0;
   overflow: hidden;
