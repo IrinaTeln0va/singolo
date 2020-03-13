@@ -443,7 +443,7 @@ a {
 }
 
 .filters-wrapper {
-  margin-bottom: 18px;
+  margin-bottom: 13px;
   margin-left: 1px;
 
   font-size: 0;
@@ -507,14 +507,20 @@ a {
   justify-content: space-between;
   max-height: 620px;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
+  margin-left: -5px;
+  padding: 0 5px;
+  padding-top: 5px;
+  overflow-y: hidden;
 
   list-style: none;
 }
 
 .portfolio-item {
   margin-bottom: 20px;
+}
+
+.portfolio-item.active {
+  outline: 5px solid #F06C64;
 }
 
 .about-us {

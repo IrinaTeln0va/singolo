@@ -68,11 +68,19 @@ const SHIFT_IMAGE = 4;
 const onFilterClick = (evt) => {
     filtersList.forEach(item => item.classList.remove('active'));
     evt.target.classList.add('active');
-
-    const portfolioList = [...portfolioWrap.children];
+    const portfolioList = [...portfolioWrap.querySelectorAll('.portfolio-item')];
     portfolioWrap.append(...portfolioList.slice(0, SHIFT_IMAGE));
 }
 
 filtersList.forEach((filter) => {
     filter.addEventListener('click', onFilterClick);
+});
+
+// portfolio
+
+portfolioWrap.addEventListener('click', (evt) => {
+    portfolioWrap.querySelectorAll('.portfolio-item').forEach((item) => {
+        item.classList.remove('active');
+    });
+    evt.target.parentElement.classList.add('active');
 });
