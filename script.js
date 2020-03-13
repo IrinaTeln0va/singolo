@@ -58,3 +58,21 @@ mockup.forEach(item => {
         item.classList.toggle('mockup-disabled');
     })
 });
+
+// filters
+
+const filtersList = document.querySelectorAll('.filter-btn');
+const portfolioWrap = document.querySelector('.portfolio-projects');
+const SHIFT_IMAGE = 4;
+
+const onFilterClick = (evt) => {
+    filtersList.forEach(item => item.classList.remove('active'));
+    evt.target.classList.add('active');
+
+    const portfolioList = [...portfolioWrap.children];
+    portfolioWrap.append(...portfolioList.slice(0, SHIFT_IMAGE));
+}
+
+filtersList.forEach((filter) => {
+    filter.addEventListener('click', onFilterClick);
+});

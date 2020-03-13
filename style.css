@@ -494,7 +494,8 @@ a {
   margin-left: 10px;
 }
 
-.filter-btn:hover {
+.filter-btn:hover,
+.filter-btn.active {
   color: #dedede;
 
   border-color: #c5c5c5;
