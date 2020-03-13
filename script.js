@@ -1,3 +1,14 @@
+// navigation
+
+const navList = document.querySelector('.nav-list');
+
+navList.addEventListener('click', (evt) => {
+    navList.querySelectorAll('.service-link').forEach((link) => link.classList.remove('active'));
+    evt.target.classList.add('active');
+});
+
+// slider
+
 const slidesContainer = document.querySelector('.slides-list');
 const rightArrow = document.querySelector('.arrow-right');
 const leftArrow = document.querySelector('.arrow-left');
@@ -37,6 +48,13 @@ leftArrow.addEventListener('click', () => {
     slidesContainer.addEventListener('transitionend', prevSlide, { once: true });
 });
 
-const mockup = [...document.querySelectorAll('.mockup-1-wrap')];
+const mockup = document.querySelectorAll('.mockup-1-wrap');
 
-mockup.forEach(item => item.addEventListener('click', () => item.classList.toggle('mockup-disabled')));
+mockup.forEach(item => {
+    item.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('phone-shadow')) {
+            return;
+        }
+        item.classList.toggle('mockup-disabled');
+    })
+});

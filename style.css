@@ -44,6 +44,9 @@ a {
 }
 
 .main-header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
 }
@@ -232,7 +235,7 @@ a {
   z-index: 2;
 }
 
-.mockup-1-wrap::before {
+.phone-shadow {
   content: "";
   position: absolute;
   top: 0;
@@ -247,7 +250,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.gorizontal-mockup::before {
+.gorizontal-mockup .phone-shadow {
   top: -26px;
   
   background-image: url("assets/img/gorizontal-shadow.png");
@@ -466,6 +469,10 @@ a {
   border: 1px solid #666d89;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.filter-btn:focus {
+  outline: none;
 }
 
 .filter-btn-all {
