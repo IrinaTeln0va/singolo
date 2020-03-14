@@ -84,3 +84,47 @@ portfolioWrap.addEventListener('click', (evt) => {
     });
     evt.target.parentElement.classList.add('active');
 });
+
+//form
+
+const submitBtn = document.querySelector('.submit-btn');
+const form = document.querySelector('.request-form');
+
+const generateMessageContent = (title = 'Без темы', descr ='Без описания') => {
+    return `<div class="messageInner"><h3 class="message-title">Письмо отправлено</h3>
+<div class="message-subject">${ title ? `Тема: <span class="insertedText">${title.toUpperCase()}` : `Без темы` }</div>
+<div class="message-descr">${ descr ? `Описание: </span><span class="insertedText">${descr.toUpperCase() }` : `Без описания` }</div>
+<button class="message-btn" type="button">OK</button></div>`
+}
+
+const createMessageElem = (titleText, descrText) => {
+    messageElement = document.createElement('div');
+    messageElement.classList.add('overlay');
+    messageElement.innerHTML = `${generateMessageContent(titleText, descrText)}`;
+    return messageElement;
+}
+
+form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    
+    const titleText = document.querySelector('.subject-input').value;
+    const descrText = document.querySelector('.desc-input').value;
+    const messageElem = createMessageElem(titleText, descrText);
+
+    form.append(messageElem);
+    setTimeout(() => {
+        messageElem.classList.add('animated');
+    }, 0);
+
+    addCloseHandler(messageElem);
+});
+
+const addCloseHandler = (messageElem) => {
+    const messageBtn = document.querySelector('.message-btn');
+    
+    messageBtn.addEventListener('click', () => {
+        form.reset();
+        messageElem.remove();
+    });
+};
+

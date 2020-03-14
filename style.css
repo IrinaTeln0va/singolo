@@ -288,6 +288,7 @@ a {
 
 .services {
   border-bottom: 6px solid #ffffff;
+  scroll-margin-top: 95px;
 }
 
 .services-container {
@@ -414,6 +415,7 @@ a {
 .portfolio {
   background-color: #2d303a;
   border-bottom: 5.9px solid #323746;
+  scroll-margin-top: 95px;
 }
 
 .portfolio-container {
@@ -528,6 +530,8 @@ a {
   padding-bottom: 67px;
 
   border-bottom: 6px solid #ffffff;
+
+  scroll-margin-top: 95px;
 }
 
 .about-us-title {
@@ -660,6 +664,8 @@ a {
 
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
+
+  scroll-margin-top: 95px;
 }
 
 .request-title {
@@ -689,6 +695,7 @@ a {
 }
 
 .request-form {
+  position: relative;
   width: 619px;
   padding-top: 2px;
 }
@@ -773,6 +780,16 @@ a {
 .submit-btn:hover {
   background-color: #d6564f;
   border: 1px solid transparent;
+}
+
+.submitMessage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #f06c64;
 }
 
 .contacts {
@@ -880,4 +897,94 @@ a {
   padding: 0;
 
   list-style: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: flex;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+}
+
+.overlay.animated {
+  opacity: 1;
+  transition: 0.6s;
+}
+
+.messageInner {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin: auto;
+  min-width: 350px;
+  background-color: #f2f2f2;
+  border-top: 6px solid #FBC65F;
+  max-width: 350px;
+  color: rgb(102, 109, 137);
+  transform: scale(0);
+}
+
+.overlay.animated .messageInner {
+  transform: scale(1);
+  transition: 0.6s;
+}
+
+.message-title {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.message-subject {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.message-descr {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.insertedText {
+  color: #202434;
+}
+
+.message-btn {
+  margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  padding-top: 6px;
+  padding-right: 55px;
+  padding-bottom: 6px;
+  padding-left: 55px;
+
+  font: inherit;
+  font-size: 15px;
+  vertical-align: middle;
+  text-align: center;
+  
+  text-transform: capitalize;
+  word-spacing: -0.2px;
+  background-color: #202434e5;
+  color: #f2f2f2;
+
+  
+  border: 1px solid #666d89;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.message-btn:hover {
+  background-color: transparent;
+  color: #767e9e;
 }
