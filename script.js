@@ -69,7 +69,17 @@ const onFilterClick = (evt) => {
     filtersList.forEach(item => item.classList.remove('active'));
     evt.target.classList.add('active');
     const portfolioList = [...portfolioWrap.querySelectorAll('.portfolio-item')];
-    portfolioWrap.append(...portfolioList.slice(0, SHIFT_IMAGE));
+    const positionList = portfolioList.map((item, index) => index).sort((a, b) => Math.random() - 0.5);
+
+    portfolioList.forEach((elem) => elem.remove());
+    for (let i = 0; i < portfolioList.length; i++) {
+        portfolioList[i].style.order = positionList[i] + 1;
+        portfolioList[i].classList.add('animated');
+    }
+    portfolioWrap.append(...portfolioList);
+    setTimeout(() => {
+        portfolioList.forEach((item) => item.classList.remove('animated'));
+    }, 0);
 }
 
 filtersList.forEach((filter) => {
@@ -92,8 +102,8 @@ const form = document.querySelector('.request-form');
 
 const generateMessageContent = (title = 'Без темы', descr ='Без описания') => {
     return `<div class="messageInner"><h3 class="message-title">Письмо отправлено</h3>
-<div class="message-subject">${ title ? `Тема: <span class="insertedText">${title.toUpperCase()}` : `Без темы` }</div>
-<div class="message-descr">${ descr ? `Описание: </span><span class="insertedText">${descr.toUpperCase() }` : `Без описания` }</div>
+<div class="message-subject">${ title ? `Тема: <span class="insertedText">${title}` : `Без темы` }</div>
+<div class="message-descr">${ descr ? `Описание: </span><span class="insertedText">${descr}` : `Без описания` }</div>
 <button class="message-btn" type="button">OK</button></div>`
 }
 

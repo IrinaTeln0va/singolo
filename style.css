@@ -519,6 +519,12 @@ a {
 
 .portfolio-item {
   margin-bottom: 20px;
+  transition: 1s;
+}
+
+.portfolio-item.animated {
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .portfolio-item.active {
