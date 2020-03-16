@@ -237,6 +237,7 @@ a {
 .mockup-1-wrap img {
   position: relative;
   z-index: 2;
+  user-select: none;
 }
 
 .phone-shadow {
@@ -523,7 +524,7 @@ a {
 
 .portfolio-item {
   margin-bottom: 20px;
-  transition: 1s;
+  transition: opacity 1s;
 }
 
 .portfolio-item.animated {
