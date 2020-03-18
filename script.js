@@ -117,19 +117,28 @@ window.onload = function () {
     const filtersList = document.querySelectorAll('.filter-btn');
     const portfolioWrap = document.querySelector('.portfolio-projects');
     const SHIFT_IMAGE = 4;
+    let isPicturesAnimating = false;
 
     const onFilterClick = (evt) => {
+        if (isPicturesAnimating) {
+            return;
+        }
+        isPicturesAnimating = true;
         filtersList.forEach(item => item.classList.remove('active'));
         evt.target.classList.add('active');
         const portfolioList = Array.from(portfolioWrap.querySelectorAll('.portfolio-item'));
         [...portfolioWrap.children].forEach((elem) => elem.style.opacity = 0);
         portfolioWrap.children[1].addEventListener('transitionend', () => {
+            if (portfolioWrap.children[1].style.opacity == 1) {
+                isPicturesAnimating = false;
+                return;
+            }
             portfolioWrap.append(...portfolioList.sort((a, b) => Math.random() - 0.5));
             setTimeout(() => {
                 [...portfolioWrap.children].forEach((elem) => elem.style.opacity = 1);
             }, 0);
             
-        }, {once: true});
+        });
     }
 
     filtersList.forEach((filter) => {
