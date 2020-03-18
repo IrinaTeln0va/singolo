@@ -1,12 +1,64 @@
 window.onload = function () {
+
         // navigation
 
     const navList = document.querySelector('.nav-list');
+    const header = document.querySelector('.main-header');
+    const navLinksList = header.querySelectorAll('.service-link');
+    let clickedScrollTarget = null;
 
-    navList.addEventListener('click', (evt) => {
-        navList.querySelectorAll('.service-link').forEach((link) => link.classList.remove('active'));
-        evt.target.classList.add('active');
-    });
+    document.addEventListener('scroll', pageScrollHandler);
+    navList.addEventListener('click', navLinkClickHandler);
+
+    function pageScrollHandler() {
+        if (clickedScrollTarget) {
+            if (!isScrollTargetReached(clickedScrollTarget)) {
+                // clickedScrollTarget = null;
+                return;
+            }
+        }
+        clickedScrollTarget = null;
+        navLinksList.forEach((link) => {
+            const scrollTarget = getScrollTarget(link);
+            if (isScrollTargetReached(scrollTarget)) {
+                highlightActiveLink(link);
+            }
+        });
+    };
+
+    function navLinkClickHandler(evt) {
+        evt.preventDefault(); 
+
+        clickedScrollTarget = getScrollTarget(evt.target);
+        scrollPageToTarget(clickedScrollTarget);
+
+        highlightActiveLink(evt.target);
+    };
+
+    function getScrollTarget(link) {
+        return document.querySelector(`${link.getAttribute('href')}`);
+    }
+
+    function isScrollTargetReached(scrollTarget) {
+        const scrollTargetTopPosition = scrollTarget.offsetTop;
+        const scrollTargetBottomPosition = scrollTargetTopPosition + scrollTarget.offsetHeight
+        const offset = header.offsetHeight + 10;
+        if (window.pageYOffset + offset >= scrollTargetTopPosition &&
+            window.pageYOffset + offset < scrollTargetBottomPosition) {
+                return true;
+        }
+    }
+
+    function highlightActiveLink(activeLink) {
+        navLinksList.forEach((link) => link.classList.remove('active'));
+        activeLink.classList.add('active');
+    }
+
+    function scrollPageToTarget(target) {
+        const offset = header.offsetHeight;
+        const coordYScrollTo = target.offsetTop - offset;
+        window.scrollTo(0, coordYScrollTo);
+    }
 
     // slider
 
@@ -69,18 +121,15 @@ window.onload = function () {
     const onFilterClick = (evt) => {
         filtersList.forEach(item => item.classList.remove('active'));
         evt.target.classList.add('active');
-        const portfolioList = [...portfolioWrap.querySelectorAll('.portfolio-item')];
-        const positionList = portfolioList.map((item, index) => index).sort((a, b) => Math.random() - 0.5);
-
-        portfolioList.forEach((elem) => elem.remove());
-        for (let i = 0; i < portfolioList.length; i++) {
-            portfolioList[i].style.order = positionList[i] + 1;
-            portfolioList[i].classList.add('animated');
-        }
-        portfolioWrap.append(...portfolioList);
-        setTimeout(() => {
-            portfolioList.forEach((item) => item.classList.remove('animated'));
-        }, 0);
+        const portfolioList = Array.from(portfolioWrap.querySelectorAll('.portfolio-item'));
+        [...portfolioWrap.children].forEach((elem) => elem.style.opacity = 0);
+        portfolioWrap.children[1].addEventListener('transitionend', () => {
+            portfolioWrap.append(...portfolioList.sort((a, b) => Math.random() - 0.5));
+            setTimeout(() => {
+                [...portfolioWrap.children].forEach((elem) => elem.style.opacity = 1);
+            }, 0);
+            
+        }, {once: true});
     }
 
     filtersList.forEach((filter) => {
@@ -122,7 +171,6 @@ window.onload = function () {
         const descrText = document.querySelector('.desc-input').value;
         const messageElem = createMessageElem(titleText, descrText);
 
-        form.reset();
         form.append(messageElem);
         setTimeout(() => {
             messageElem.classList.add('animated');
@@ -135,6 +183,7 @@ window.onload = function () {
         const messageBtn = document.querySelector('.message-btn');
         
         messageBtn.addEventListener('click', () => {
+            form.reset();
             messageElem.remove();
         });
     };
