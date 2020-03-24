@@ -299,6 +299,13 @@ a {
     left: 36px;
   }
 }
+@media (max-width: 374px) {
+  .mockup-1-wrap {
+    width: 65px;
+    top: 33px;
+    left: 52px;
+  }
+}
 
 .mockup-1-inner {
   position: relative;
@@ -314,6 +321,11 @@ a {
   .mockup-1-inner {
     min-height: 208px;
     width: 366px;
+  }
+}
+@media (max-width: 374px) {
+  .mockup-1-inner {
+    width: 328px;
   }
 }
 
@@ -340,6 +352,12 @@ a {
   .gorizontal-mockup {
     top: 21px;
     left: 195px;
+  }
+}
+@media (max-width: 374px) {
+  .gorizontal-mockup {
+    top: 35px;
+    left: 172px;
   }
 }
 
@@ -373,6 +391,11 @@ a {
     width: 90px;
     height: 177px;
     background-size: 98%;
+  }
+}
+@media (max-width: 374px) {
+  .phone-shadow {
+    width: 75px;
   }
 }
 
@@ -417,6 +440,11 @@ a {
     height: 150px;
   }
 }
+@media (max-width: 374px) {
+  .mockup-1-wrap::after {
+    width: 73px;
+  }
+}
 
 .gorizontal-mockup::after {
   background-image: url("assets/img/screen--blue.jpg");
@@ -430,6 +458,12 @@ a {
   .gorizontal-mockup::after {
     top: 22px;
     left: 3px;
+  }
+}
+@media (max-width: 374px) {
+  .gorizontal-mockup::after {
+    top: 20px;
+    left: 5px;
   }
 }
 
@@ -464,6 +498,11 @@ a {
 @media (max-width: 767px) {
   .mockup-2-wrap img {
     height: 180px;
+  }
+}
+@media (max-width: 374px) {
+  .mockup-2-wrap img {
+    height: 145px;
   }
 }
 
@@ -784,6 +823,13 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
+@media (max-width: 374px) {
+  .filter-btn {
+    padding-right: 3px;
+    padding-left: 3px;
+    font-size: 11px;
+  }
+}
 
 .filter-btn:focus {
   outline: none;
@@ -805,6 +851,11 @@ a {
 
 .filter-btn + .filter-btn {
   margin-left: 10px;
+}
+@media (max-width: 374px) {
+  .filter-btn + .filter-btn {
+    margin-left: 4px;
+  }
 }
 
 .filter-btn:hover,
@@ -838,6 +889,12 @@ a {
     align-self: center;
   }
 }
+@media (max-width: 374px) {
+  .portfolio-projects {
+    max-height: 472px;
+    justify-content: center;
+  }
+}
 
 .portfolio-item {
   margin-right: 20px;
@@ -856,6 +913,12 @@ a {
     width: 151px;
     height: 128px;
     margin-bottom: 14px;
+  }
+}
+@media (max-width: 374px) {
+  .portfolio-item {
+    width: 123px;
+    height: 105px;
   }
 }
 
