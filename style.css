@@ -1535,6 +1535,16 @@ a {
   transform: scale(0);
   overflow: auto;
 }
+@media (max-width: 767px) {
+  .messageInner {
+    width: 270px;
+  }
+}
+@media (max-width: 374px) {
+  .messageInner {
+    width: 170px;
+  }
+}
 
 .overlay.animated .messageInner {
   transform: scale(1);
