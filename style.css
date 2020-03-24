@@ -34,6 +34,102 @@ a {
   clip: rect(0 0 0 0);
 }
 
+.mobile-overlay {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 0;
+    z-index: 11;
+    background-color: #2D303A;
+    box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu-active .mobile-menu {
+    width: 278px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu-active .mobile-overlay {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #2D303A;
+    opacity: 0.6;
+    z-index: 11;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu-active .logo {
+    position: fixed;
+    left: 30px;
+    top: 10px;
+    z-index: 11;
+    left: 31px;
+    top: 23px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu-active {
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu-active .main-nav {
+    display: flex;
+    height: 100vh;
+    width: 278px;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu-active .nav-list {
+    margin: auto;
+    margin-left: 39px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 65px;
+    padding-bottom: 131px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu-active .service-item {
+    margin-bottom: 27px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu-active .service-link {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu-active .service-item + .service-item::before {
+    display: none;
+  }
+}
+
 .container {
   box-sizing: border-box;
   width: 1020px;
@@ -65,6 +161,39 @@ a {
     padding-bottom: 17px;
     justify-content: center;
   }
+}
+
+.burger-btn {
+  display: none;
+}
+@media (max-width: 767px) {
+  .burger-btn {
+    height: 19px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 26px;
+    left: 20px;
+    justify-content: space-between;
+    width: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 11;
+  }
+}
+
+.burger-btn span {
+  display: block;
+  height: 2.5px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.header-menu-active .burger-btn {
+  position: fixed;
+  z-index: 12;
+  transform: rotate(90deg);
+  transition: 0.5s;
 }
 
 .logo {
