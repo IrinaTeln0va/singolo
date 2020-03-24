@@ -1,5 +1,4 @@
 window.onload = function () {
-
         // navigation
 
     const navList = document.querySelector('.nav-list');
@@ -196,5 +195,12 @@ window.onload = function () {
             messageElem.remove();
         });
     };
-};
 
+    // mobile menu
+
+    const burgerMenuBtn = document.querySelector('.burger-btn');
+
+    burgerMenuBtn.addEventListener('click', () => {
+        header.classList.toggle('header-menu-active');
+    });
+};
