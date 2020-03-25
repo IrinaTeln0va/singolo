@@ -158,10 +158,10 @@ window.onload = function () {
     const submitBtn = document.querySelector('.submit-btn');
     const form = document.querySelector('.request-form');
 
-    const generateMessageContent = (title = 'Без темы', descr ='Без описания') => {
+    const generateMessageContent = (title, descr) => {
         return `<div class="messageInner"><h3 class="message-title">Письмо отправлено</h3>
-    <div class="message-subject">${ title ? `Тема: <span class="insertedText">${title}` : `Без темы` }</div>
-    <div class="message-descr">${ descr ? `Описание: </span><span class="insertedText">${descr}` : `Без описания` }</div>
+    <div class="message-subject">${ title ? `Тема: <span class="insertedTitle insertedText"></span>` : `Без темы`}</div>
+    <div class="message-descr">${ descr ? `Описание: <span class="insertedDescr insertedText"></span>` : `Без описания`}</div>
     <button class="message-btn" type="button">OK</button></div>`
     }
 
@@ -169,6 +169,14 @@ window.onload = function () {
         messageElement = document.createElement('div');
         messageElement.classList.add('overlay');
         messageElement.innerHTML = `${generateMessageContent(titleText, descrText)}`;
+        const elemForTitle = messageElement.querySelector('.insertedTitle');
+        const elemForDescr = messageElement.querySelector('.insertedDescr');
+        if (elemForTitle) {
+            elemForTitle.innerText = titleText;
+        }
+        if (elemForDescr) {
+            elemForDescr.innerText = descrText;
+        }
         return messageElement;
     }
 

@@ -1706,6 +1706,8 @@ a {
 
 .insertedText {
   color: #202434;
+  font-weight: 900;
+  text-decoration: underline;
 }
 
 .message-btn {
