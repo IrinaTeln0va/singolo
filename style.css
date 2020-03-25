@@ -280,6 +280,11 @@ a {
 .service-link:hover {
   color: #f06c64;
 }
+@media (max-width: 767px) {
+  .service-link:hover {
+    color: #ffffff;
+  }
+}
 
 .service-link.active {
   color: #f06c64;
