@@ -207,8 +207,12 @@ window.onload = function () {
     // mobile menu
 
     const burgerMenuBtn = document.querySelector('.burger-btn');
+    const menuOverlay = document.querySelector('.mobile-overlay');
 
     burgerMenuBtn.addEventListener('click', () => {
         header.classList.toggle('header-menu-active');
+        menuOverlay.addEventListener('click', () => {
+            header.classList.remove('header-menu-active');
+        });
     });
 };
